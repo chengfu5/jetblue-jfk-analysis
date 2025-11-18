@@ -4,6 +4,8 @@ This project analyzes the 2023 flight operations for JetBlue Airways (B6) at JFK
 
 The project successfully builds a machine learning model that confirms this hypothesis. This model is then used as a predictive engine to run simulations that quantify the potential savings from operational improvements and provide a data-drive approach for scheduling optimization.
 
+In addition, a Flight Delay Forecasting Model using Time Series Analysis was performed to shift the focus from individual flight segments to daily flight operational trends. The goal here was to forecast the average daily departure delay at JFK which can better enable resource planning and crew scheduling.
+
 ## Data
 
 * `departures.csv`: All JetBlue departures from JFK in 2023
@@ -51,6 +53,22 @@ Scenario 2: Targeting Riskiest Routes
 * Method: Identify which routes have the highest delays and only capping the inbound delays for those 20 airport routes
 * Result: Although this scenario did not "save" as much time/money, it is a more realistic and targeting approach for segmenting certain flights and focusing operations on those routes that are chronically delayed.
 
+## Flight Delay Forecasting
+
+Two Time Series Models were selected for the analysis (ARIMA and SARMIAX). The ARIMA model acted as a baseline approach that only used past departure delays to predict future departure delays while the SARIMAX model used two exogenous variables (inbound flight delay and inbound weather delay) for the forecasting.
+
+The same temporal training and testing data set were used for the forecasting analysis.
+
+ARIMA Results:
+MAE (min) - 10.66
+RMSE (min) - 14.26
+
+SARIMAX Results:
+MAE (min) - 7.45
+RMSE (min) - 9.28
+
+The SARIMAX model was the best performer for forecasting future flight delays.
+
 ## Tools and Libraries
 
 * Python
@@ -59,3 +77,6 @@ Scenario 2: Targeting Riskiest Routes
 * Scikit-learn (Pipeline, Column Transformer, Standard Scaler, One Hot Encoder, Randomized Search CV, Train/Test/Split)
 * XGBoost
 * Matplotlib and Seaborn
+* ARIMA
+* SARIMAX
+* Statsmodels
