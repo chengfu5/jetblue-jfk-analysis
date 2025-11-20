@@ -69,6 +69,12 @@ RMSE (min) - 9.28
 
 The SARIMAX model was the best performer for forecasting future flight delays.
 
+## Business Impact
+
+By optimizing the routes with highest in-bound delays, scheduling and operations can be best positioned to save the most time and money. This can potentially save operational costs and labor by preparing crews and staff ahead of time while also communicating with passengers about potential delays which can lead to higher customer satisfaction.
+
+Forecasting allows JetBlue to accurately predict when seasonal or periodic delays occur. Operations teams can use this information to position crew members at appropriate locations and times which can save money in case of a crew shortage at peak delay times. Resources like backup aircraft can also be appropriately allocated and prepared in case of longer than average delays which can help with reducing passenger complaints on the ground, thus leading to higher customer satisfaction.
+
 ## Tools and Libraries
 
 * Python
